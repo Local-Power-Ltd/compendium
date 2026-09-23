@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       Local Power — AI Discovery Files
  * Plugin URI:        https://github.com/Local-Power-Ltd/compendium
- * Description:       Serves llms.txt, llms-full.txt and ai.txt from the domain root, keeping them in sync with the public Local Power Compendium repository on GitHub. Adds rel=alternate pointers to those files and welcomes AI crawlers in robots.txt. Emits no schema.org markup — structured data is left entirely to Rank Math. Adds nothing visible to human visitors and hides nothing from them.
- * Version:           3.0.0
+ * Description:       Serves llms.txt, llms-full.txt and ai.txt from the domain root, keeping them in sync with the public Local Power Compendium repository on GitHub. Sync is manual — press "Refresh from GitHub" on this screen after updating the repository — with a weekly background check as a safety net. Adds rel=alternate pointers to those files and welcomes AI crawlers in robots.txt. Emits no schema.org markup — structured data is left entirely to Rank Math. Adds nothing visible to human visitors and hides nothing from them.
+ * Version:           3.1.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Local Power Ltd
@@ -17,10 +17,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 final class Local_Power_AI_Files {
 
-	const VERSION       = '3.0.0';
+	const VERSION       = '3.1.0';
 	const REWRITE_FLAG  = 'lp_ai_files_flushed_' . self::VERSION;
 	const CRON_HOOK     = 'lp_ai_files_refresh';
 	const OPTION_PREFIX = 'lp_ai_file_';
+
+	/** admin-post action name for the manual "Refresh from GitHub" button. */
+	const REFRESH_ACTION = 'lp_ai_files_refresh_now';
 
 	/**
 	 * Root-served plain-text files: request path => filename in /data and in the repo.
@@ -34,17 +37,18 @@ final class Local_Power_AI_Files {
 	/**
 	 * Public repository the files are kept in sync with.
 	 *
-	 * Content is fetched from here on a schedule (never during a visitor's
-	 * request) and stored in the options table. If the fetch fails for any
-	 * reason, the copy bundled in /data is served instead, so the URLs never
-	 * break and no visitor ever waits on a remote call.
+	 * Content is fetched from here when an administrator presses the refresh
+	 * button, and once a week as a safety net — never during a visitor's
+	 * request. If the fetch fails for any reason, the copy already stored (or,
+	 * failing that, the copy bundled in /data) is served instead, so the URLs
+	 * never break and no visitor ever waits on a remote call.
 	 */
 	private const REPO_URL = 'https://github.com/Local-Power-Ltd/compendium';
 	private const RAW_BASE = 'https://raw.githubusercontent.com/Local-Power-Ltd/compendium/main/';
 
-	/** Refresh interval, and the shortest plausible valid file. */
-	private const REFRESH_INTERVAL = 6 * HOUR_IN_SECONDS;
-	private const MIN_BYTES        = 200;
+	/** Background safety-net schedule, and the shortest plausible valid file. */
+	private const CRON_SCHEDULE = 'lp_ai_weekly';
+	private const MIN_BYTES     = 200;
 
 	public static function init(): void {
 		$self = new self();
@@ -56,7 +60,12 @@ final class Local_Power_AI_Files {
 		add_action( 'wp_head', array( $self, 'emit_machine_pointers' ), 6 );
 		add_filter( 'robots_txt', array( $self, 'filter_robots_txt' ), 10, 2 );
 
+		add_filter( 'cron_schedules', array( __CLASS__, 'register_schedule' ) );
 		add_action( self::CRON_HOOK, array( __CLASS__, 'refresh_all' ) );
+
+		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $self, 'action_links' ) );
+		add_action( 'admin_post_' . self::REFRESH_ACTION, array( __CLASS__, 'handle_manual_refresh' ) );
+		add_action( 'admin_notices', array( __CLASS__, 'maybe_admin_notice' ) );
 
 		register_activation_hook( __FILE__, array( __CLASS__, 'on_activate' ) );
 		register_deactivation_hook( __FILE__, array( __CLASS__, 'on_deactivate' ) );
@@ -101,12 +110,12 @@ final class Local_Power_AI_Files {
 			return; // Fall through to a normal 404 rather than serving an empty file.
 		}
 
-		status_header( 200 );
-		header( 'Content-Type: text/plain; charset=utf-8' );
-		header( 'X-Robots-Tag: all' );
-		header( 'Cache-Control: public, max-age=3600' );
-
 		if ( ! headers_sent() ) {
+			status_header( 200 );
+			header( 'Content-Type: text/plain; charset=utf-8' );
+			header( 'X-Content-Type-Options: nosniff' );
+			header( 'X-Robots-Tag: all' );
+			header( 'Cache-Control: public, max-age=3600' );
 			header_remove( 'Expires' );
 			header_remove( 'Pragma' );
 		}
@@ -118,9 +127,9 @@ final class Local_Power_AI_Files {
 	/**
 	 * Stored copy from GitHub if we have one, otherwise the bundled file.
 	 *
-	 * This never makes a network call. Fetching happens only on the cron hook
-	 * and on activation, so a visitor request is never blocked on GitHub being
-	 * up, fast, or reachable at all.
+	 * This never makes a network call. Fetching happens only on the refresh
+	 * button, the weekly cron hook and on activation, so a visitor request is
+	 * never blocked on GitHub being up, fast, or reachable at all.
 	 */
 	private static function get_content( string $path ): ?string {
 		$stored = get_option( self::OPTION_PREFIX . sanitize_key( $path ), '' );
@@ -141,15 +150,34 @@ final class Local_Power_AI_Files {
 	 * ------------------------------------------------------------------ */
 
 	/**
+	 * Register the weekly safety-net schedule.
+	 */
+	public static function register_schedule( $schedules ) {
+		if ( ! is_array( $schedules ) ) {
+			return $schedules;
+		}
+
+		$schedules[ self::CRON_SCHEDULE ] = array(
+			'interval' => WEEK_IN_SECONDS,
+			'display'  => 'Once weekly (Local Power AI files)',
+		);
+
+		return $schedules;
+	}
+
+	/**
 	 * Pull all three files from the public repository.
 	 *
-	 * Runs on the cron hook and on activation. A file is only stored if the
-	 * response is a 200 carrying plausible plain text — so a GitHub error page,
-	 * a redirect to a login, a truncated body or an empty file can never
-	 * overwrite good content. Anything that fails simply leaves the previous
-	 * copy in place.
+	 * A file is only stored if the response is a 200 carrying plausible plain
+	 * text — so a GitHub error page, a redirect to a login, a truncated body or
+	 * an empty file can never overwrite good content. Anything that fails
+	 * simply leaves the previous copy in place.
+	 *
+	 * @return int Number of files actually updated (0-3).
 	 */
-	public static function refresh_all(): void {
+	public static function refresh_all(): int {
+		$updated = 0;
+
 		foreach ( array_keys( self::ROOT_FILES ) as $path ) {
 			$response = wp_remote_get(
 				self::RAW_BASE . self::ROOT_FILES[ $path ],
@@ -179,9 +207,91 @@ final class Local_Power_AI_Files {
 			}
 
 			update_option( self::OPTION_PREFIX . sanitize_key( $path ), $body, false );
+			++$updated;
 		}
 
 		update_option( 'lp_ai_files_last_refresh', time(), false );
+
+		return $updated;
+	}
+
+	/* ---------------------------------------------------------------------
+	 * Manual refresh — Plugins screen
+	 * ------------------------------------------------------------------ */
+
+	/**
+	 * Add a "Refresh from GitHub" link to the plugin's row on the Plugins screen.
+	 */
+	public function action_links( $links ): array {
+		$links = is_array( $links ) ? $links : array();
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return $links;
+		}
+
+		$url = wp_nonce_url(
+			admin_url( 'admin-post.php?action=' . self::REFRESH_ACTION ),
+			self::REFRESH_ACTION
+		);
+
+		$last  = (int) get_option( 'lp_ai_files_last_refresh', 0 );
+		$label = $last
+			? sprintf( 'Refresh from GitHub (last %s ago)', human_time_diff( $last, time() ) )
+			: 'Refresh from GitHub';
+
+		array_unshift(
+			$links,
+			'<a href="' . esc_url( $url ) . '">' . esc_html( $label ) . '</a>'
+		);
+
+		return $links;
+	}
+
+	/**
+	 * Handle the refresh button. Administrators only, nonce-protected.
+	 */
+	public static function handle_manual_refresh(): void {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( 'You do not have permission to refresh these files.', '', array( 'response' => 403 ) );
+		}
+
+		check_admin_referer( self::REFRESH_ACTION );
+
+		$updated = self::refresh_all();
+
+		wp_safe_redirect(
+			add_query_arg( 'lp_ai_refreshed', (string) $updated, admin_url( 'plugins.php' ) )
+		);
+		exit;
+	}
+
+	/**
+	 * Report the result of a manual refresh.
+	 */
+	public static function maybe_admin_notice(): void {
+		if ( ! isset( $_GET['lp_ai_refreshed'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+			return;
+		}
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
+		$updated = (int) $_GET['lp_ai_refreshed']; // phpcs:ignore WordPress.Security.NonceVerification
+		$total   = count( self::ROOT_FILES );
+
+		if ( $updated > 0 ) {
+			printf(
+				'<div class="notice notice-success is-dismissible"><p>%s</p></div>',
+				esc_html( sprintf( 'Updated %d of %d AI discovery files from GitHub.', $updated, $total ) )
+			);
+			return;
+		}
+
+		printf(
+			'<div class="notice notice-warning is-dismissible"><p>%s</p></div>',
+			esc_html( 'Nothing was updated — GitHub could not be reached, or returned content that failed validation. The copies already stored are still being served.' )
+		);
 	}
 
 	/* ---------------------------------------------------------------------
@@ -246,8 +356,15 @@ final class Local_Power_AI_Files {
 	 * Note: this filter only runs when WordPress generates robots.txt itself.
 	 * If a static robots.txt exists in the web root, the web server serves that
 	 * and this filter never fires — see INSTALL.md.
+	 *
+	 * Each named agent gets its own group. Under the robots.txt specification a
+	 * crawler obeys only the most specific group that matches it, so any rule
+	 * added to the site-wide "User-agent: *" group in future will NOT apply to
+	 * the agents named here unless it is added below as well.
 	 */
-	public function filter_robots_txt( string $output, $public ): string {
+	public function filter_robots_txt( $output, $public ): string {
+		$output = is_string( $output ) ? $output : '';
+
 		if ( ! $public ) {
 			return $output;
 		}
@@ -265,7 +382,7 @@ final class Local_Power_AI_Files {
 			'ClaudeBot', 'Claude-Web', 'Claude-SearchBot', 'anthropic-ai',
 			'PerplexityBot', 'Perplexity-User',
 			'Google-Extended', 'Applebot-Extended', 'Bingbot',
-			'CCBot', 'Amazonbot', 'meta-externalagent', 'Bytespider',
+			'CCBot', 'Amazonbot', 'meta-externalagent',
 			'cohere-ai', 'DuckAssistBot', 'MistralAI-User', 'YouBot',
 		);
 
@@ -286,11 +403,11 @@ final class Local_Power_AI_Files {
 		delete_option( self::REWRITE_FLAG );
 		flush_rewrite_rules( false );
 
-		// Pull once now, then every six hours.
+		// Pull once now; after that only on the button, or weekly as a safety net.
 		self::refresh_all();
 
 		if ( ! wp_next_scheduled( self::CRON_HOOK ) ) {
-			wp_schedule_event( time() + self::REFRESH_INTERVAL, 'twicedaily', self::CRON_HOOK );
+			wp_schedule_event( time() + WEEK_IN_SECONDS, self::CRON_SCHEDULE, self::CRON_HOOK );
 		}
 	}
 
