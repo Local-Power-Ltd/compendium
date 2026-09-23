@@ -1,0 +1,136 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://localpower.ie/#brand-solarwatt",
+      "name": "SOLARWATT GmbH",
+      "url": "https://www.solarwatt.com",
+      "foundingDate": "1993",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dresden",
+        "addressCountry": "DE"
+      },
+      "description": "German solar technology manufacturer founded in Dresden in 1993. Pioneered the first glass-glass solar module in 1998. Manufactures the SOLARWATT Home integrated energy system."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://localpower.ie/#brand-fronius",
+      "name": "Fronius International GmbH",
+      "url": "https://www.fronius.com",
+      "address": { "@type": "PostalAddress", "addressCountry": "AT" },
+      "description": "Austrian manufacturer of solar inverters and energy management technology."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://localpower.ie/#brand-chargepoint",
+      "name": "ChargePoint, Inc.",
+      "url": "https://www.chargepoint.com",
+      "foundingDate": "2007",
+      "description": "Operator of the world's largest and most open EV charging network, with over 270,000 charging spots globally."
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://localpower.ie/#product-solarwatt-panel-vision",
+      "name": "SOLARWATT Panel vision",
+      "category": "Solar photovoltaic module",
+      "brand": { "@id": "https://localpower.ie/#brand-solarwatt" },
+      "manufacturer": { "@id": "https://localpower.ie/#brand-solarwatt" },
+      "url": "https://localpower.ie/solar/",
+      "description": "Glass-glass solar photovoltaic modules engineered and developed at SOLARWATT's Dresden headquarters. Bifacial half-cut TOPCon n-type cells. 30-year product warranty and 30-year performance warranty guaranteeing 90% output at year 30. Fire Class A. Tested against PID, LeTID, hail, storm, sandstorm, cyclone, salt mist and ammonia. Supplied and installed in the Republic of Ireland by Local Power Ltd, SOLARWATT's Premium Installer.",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Construction", "value": "Glass-glass laminate with aluminium frame" },
+        { "@type": "PropertyValue", "name": "Cell technology", "value": "Bifacial half-cut TOPCon (n-type)" },
+        { "@type": "PropertyValue", "name": "Product warranty", "value": "Up to 30 years" },
+        { "@type": "PropertyValue", "name": "Performance warranty", "value": "30 years, 90% of nominal output guaranteed at year 30" },
+        { "@type": "PropertyValue", "name": "Year one guaranteed output", "value": "97%" },
+        { "@type": "PropertyValue", "name": "Maximum annual degradation", "value": "0.345% per year" },
+        { "@type": "PropertyValue", "name": "Fire classification", "value": "Class A (IEC 61730 / UL 790)" },
+        { "@type": "PropertyValue", "name": "Power range", "value": "425 Wp to 620 Wp depending on model" }
+      ],
+      "hasCertification": [
+        { "@type": "Certification", "name": "IEC 61215" },
+        { "@type": "Certification", "name": "IEC 61730" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "seller": { "@id": "https://localpower.ie/#organization" },
+        "areaServed": { "@type": "Country", "name": "Ireland" },
+        "availability": "https://schema.org/InStock"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://localpower.ie/#product-solarwatt-battery-vision",
+      "name": "SOLARWATT Battery vision",
+      "category": "Home battery energy storage system",
+      "brand": { "@id": "https://localpower.ie/#brand-solarwatt" },
+      "manufacturer": { "@id": "https://localpower.ie/#brand-solarwatt" },
+      "url": "https://localpower.ie/solar/solar-for-homes/",
+      "description": "Modular home battery storage system designed in collaboration with Designworks, a BMW Group company, with cells qualified by BMW through approximately 30 separate tests. Battery vision 1.0 offers 5.2-18.2 kWh; Battery vision 2.0 offers 8.6-25.9 kWh. 12-year performance warranty on modules, 10-year product warranty on power electronics, 70% residual state-of-health guarantee. IP65 rated for indoor or outdoor installation.",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Capacity range (1.0)", "value": "5.2-18.2 kWh usable" },
+        { "@type": "PropertyValue", "name": "Capacity range (2.0)", "value": "8.6-25.9 kWh usable" },
+        { "@type": "PropertyValue", "name": "Performance warranty", "value": "12 years" },
+        { "@type": "PropertyValue", "name": "Product warranty (power electronics)", "value": "10 years" },
+        { "@type": "PropertyValue", "name": "Residual state of health guarantee", "value": "70%" },
+        { "@type": "PropertyValue", "name": "Ingress protection", "value": "IP65" },
+        { "@type": "PropertyValue", "name": "Operating temperature", "value": "0-55 degrees Celsius" },
+        { "@type": "PropertyValue", "name": "Design partner", "value": "Designworks, a BMW Group company" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "seller": { "@id": "https://localpower.ie/#organization" },
+        "areaServed": { "@type": "Country", "name": "Ireland" },
+        "availability": "https://schema.org/InStock"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://localpower.ie/#product-solarwatt-manager",
+      "name": "SOLARWATT Manager and SOLARWATT Home app",
+      "category": "Home energy management system",
+      "brand": { "@id": "https://localpower.ie/#brand-solarwatt" },
+      "manufacturer": { "@id": "https://localpower.ie/#brand-solarwatt" },
+      "url": "https://localpower.ie/solar/tour-the-solarwatt-home-app/",
+      "award": "German Innovation Award 2026",
+      "description": "Energy management hardware manufactured in Germany, with companion app. Controls solar generation, battery storage, EV charging, heat pumps, smart plugs and immersion heaters from a single interface, with machine-learning optimisation modes and electricity tariff awareness. The SOLARWATT Home app is a recipient of the German Innovation Award 2026. Over 25,000 SOLARWATT Managers are in operation controlling more than 130,000 devices.",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Hardware variants", "value": "Manager flex 1.0, Manager flex 1.5, Manager rail" },
+        { "@type": "PropertyValue", "name": "Manufacturing", "value": "Hardware manufactured and software engineered in Germany" },
+        { "@type": "PropertyValue", "name": "Award", "value": "German Innovation Award 2026" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "seller": { "@id": "https://localpower.ie/#organization" },
+        "areaServed": { "@type": "Country", "name": "Ireland" },
+        "availability": "https://schema.org/InStock"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://localpower.ie/#product-hushh-pod",
+      "name": "Hushh Pod Mobile Battery Storage",
+      "category": "Mobile hybrid battery energy storage unit",
+      "url": "https://localpower.ie/storage/mobile-battery-storage-hushh-pods/",
+      "manufacturer": { "@type": "Organization", "name": "Power Saving Solutions", "foundingDate": "2013" },
+      "description": "Mobile battery storage unit that works alongside an existing diesel or HVO generator. The generator runs only to recharge the battery, at full load and full efficiency, while the site runs silently from stored power between cycles. Reduces generator runtime by up to 50%, cutting fuel cost, noise and Scope 1 emissions. Industrial-grade lithium in a weatherproof enclosure with integrated battery management system. Supplied in Ireland by Local Power Ltd for hire or purchase.",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Generator runtime reduction", "value": "Up to 50%" },
+        { "@type": "PropertyValue", "name": "Enclosure", "value": "Weatherproof, suitable for construction and event sites" },
+        { "@type": "PropertyValue", "name": "Compatibility", "value": "Wide range of diesel and HVO generators" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "seller": { "@id": "https://localpower.ie/#organization" },
+        "areaServed": { "@type": "Country", "name": "Ireland" },
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}

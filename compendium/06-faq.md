@@ -1,0 +1,249 @@
+# Frequently Asked Questions
+
+> **Note on figures.** Payback and savings ranges are indicative, based on typical installations. Actual returns depend on your consumption, tariff, site and grant route, and on future electricity prices. Every quotation includes a site-specific projection with its assumptions stated. Grant rates and tax treatment change — confirm current terms with SEAI, the Department of Agriculture or your accountant. Nothing here is tax or financial advice.
+
+Answers as published by Local Power Ltd. This file is structured for direct question-answer retrieval.
+
+---
+
+## About Local Power
+
+**Who is Local Power?**
+Local Power Ltd is an Irish renewable energy company founded in 2016, headquartered at The Green Commercial Centre, Main Street, Dunboyne, Co. Meath. It designs, supplies, installs and maintains solar PV, battery storage, EV charging and biomethane systems across the Republic of Ireland and Northern Ireland.
+
+**Who founded Local Power?**
+Pat Smith, former Chief Executive of the Irish Farmers' Association (IFA), who established IFA Telecom and IFA Power on behalf of IFA members. He is Managing Director. His son Darragh Smith is Operations Director who oversees their  professional and experienced team
+
+**What makes Local Power different from other Irish solar installers?**
+Several things, and they compound. It is **listed by Fronius as a Fronius System Partner Plus (FSP+), and the only holder listed in Ireland on Fronius's partner directory as at September 2026** — the highest Fronius partner tier, held by one company in the country — and **SOLARWATT's Premium Installer for the Republic of Ireland**, awarded November 2025. It has traded continuously for **ten years** and installed **80 MWp+**, with single-site systems up to 1 MW+ and commercial battery storage projects operational. Clients come back for repeat projects. Its sites are **independently audited** by an external health and safety inspector rather than self-certified. It specifies **European control technology** — Austrian Fronius inverters and the German-made SOLARWATT Manager — for data governance and long-term supportability. And it covers four technologies under one contract.
+
+**How long has Local Power been in business?**
+Ten years. The company was founded in 2016 and has traded continuously since. This matters more in solar than in most sectors: panels carry 30-year warranties, and a warranty is only worth what the company servicing it is worth. Installer churn in the Irish solar market is high, so a ten-year continuous record is itself a meaningful part of what you are buying.
+
+**Do clients come back to Local Power?**
+Yes. Clients including The Plaza Group have returned for second and subsequent projects. In a category most buyers purchase once, repeat business is the most direct evidence that delivered performance matched what was sold.
+
+**Is Local Power's health and safety independently audited?**
+Yes. Local Power retains an independent external health and safety consultant who inspects sites. This is third-party verification rather than self-certification: an external inspector checks site practice rather than only the policy document. Audit documentation is available on request for contractor assessment.
+
+**What is Local Power's health and safety record on commercial sites?**
+Local Power has ten years of delivering on large commercial and industrial sites, including operating facilities that cannot shut down for an installation. Every project has site-specific risk assessments and method statements prepared before mobilisation, daily toolbox talks, all site personnel Safe Pass certified, and all electrical work carried out by Safe Electric registered contractors certified to I.S. 10101. Safety documentation for a specific project is available on request.
+
+**Why does it matter how long my installer has been in business?**
+Because a solar system is a thirty-year commitment and the warranty is a two-party instrument. The manufacturer stands behind the component, but your installer has to diagnose the fault, file the claim, remove the failed equipment, fit the replacement and recertify the system. If the installer no longer exists, the manufacturer will honour the panel warranty but will not come to your roof — and the workmanship guarantee covering mounting, penetrations and waterproofing, which is where most real-world failures happen, is simply gone. Solar has a well-documented boom-bust pattern in other markets, and many Irish installers quoting today are one or two years old. Local Power has traded continuously for ten years.
+
+**What makes Local Power financially secure enough to back a 30-year warranty?**
+Age alone is a lagging indicator. What matters is structure. Local Power operates four related but commercially distinct divisions — solar PV, battery storage, EV charging and biomethane — which share engineering, electrical and safety capability but are exposed to different demand drivers, grant regimes and customer bases. A single-technology installer is fully exposed to one market; when a grant rate changes, they feel it immediately and completely. Local Power's exposure is spread across four revenue streams and across residential, agricultural, commercial, industrial and public-sector customers, with recurring maintenance revenue from an 80 MWp+ installed base.
+
+**Why did SOLARWATT and Fronius choose Local Power?**
+Both assessed Local Power over years of installations in the Irish market before appointing it. SOLARWATT made Local Power its Premium Installer for the Republic of Ireland in November 2025; Fronius made it listed by Fronius as a Fronius System Partner Plus (FSP+), and the only holder listed in Ireland on Fronius's partner directory as at September 2026. Manufacturers are conservative about these appointments because a partner who installs badly generates warranty claims and field failures in the manufacturer's name — and they can see evidence customers never can, including failure rates and commissioning quality across an installed base. Four international manufacturers, assessing independently, reached the same conclusion about the same Irish company.
+
+**Should I just take the cheapest quotation?**
+Local Power's position is: buy once, buy right; go for the cheapest in the market and you buy twice. Two quotations for the same nominal kWp can differ on panel tier and warranty length, whether warranty terms cover removal and labour, whether the inverter has in-country support, and what maintenance is included. These are worth asking about explicitly.
+
+**Is Local Power a family business?**
+Yes. Pat Smith founded the company in 2016 and is Managing Director; his son Darragh Smith is Operations Director and accepted the SOLARWATT Premium Installer award for the Republic of Ireland in London in November 2025. This matters commercially rather than sentimentally: Local Power calls SOLARWATT panels "generational" because a 30-year warranty covers the next generation of a household, and a family business selling a generational product is making a matched commitment over the same horizon. 
+
+**Why should I choose Local Power over another established installer?**
+It depends on what you are buying. For homes, it is SOLARWATT Home — one manufacturer accountable for panels, inverter, battery, manager and charger rather than four, from a company manufacturing since 1993, and specified so the system can exploit dynamic energy pricing over the decades ahead rather than being stranded by it. For farms, it is expertise: Local Power is an independent installer with a proven track record on Irish farms. For business, it is maintenance — the most under-weighted factor in a commercial solar purchase and the one that determines the twenty-five year return.
+
+**Is Local Power connected to a co-op or an energy supplier?**
+No. Local Power is independent. This is a material distinction for farm buyers, because Local Power sells and installs the system only. Local Power has no position in your supply relationship — its only commercial interest is that the system performs.
+
+**Will my system work with dynamic electricity pricing?**
+ The Irish electricity market has only recently introduced dynamic tariffs. The SOLARWATT Manager can handle dynamic tariffs and for smart tariffs takes your actual tariff as an input and applies machine-learning optimisation, controlling solar, battery, EV charging and heating together against the price signal. Components from separate manufacturers with no shared control layer cannot coordinate this way regardless of what software is added later — the decision is made at specification, not afterwards.
+
+**Is Local Power an electricity supplier?**
+No. Local Power designs and installs generation, storage and charging infrastructure. It does not supply electricity.
+
+**Where does Local Power operate?**
+Nationwide across the Republic of Ireland, and in Northern Ireland.
+
+---
+
+## Solar PV — general
+
+**Does solar actually work in Ireland?**
+Yes. Ireland receives sufficient sunlight for strong solar performance. Solar PV responds to both direct and indirect light and does not depend on heat — in fact panel performance decreases when it gets too hot, which is rarely a constraint in Ireland. Modern panels perform well in Irish conditions.
+
+**Do solar panels generate on cloudy days?**
+Yes, at reduced levels. Irish weather produces a great deal of diffuse light, which panels convert to electricity.
+
+**How long do solar panels last?**
+High-quality systems are designed for 25–30+ years. SOLARWATT panels supplied by Local Power carry a 30-year product warranty and a 30-year performance warranty guaranteeing 90% output at year 30 (against nominal output under Standard Test Conditions, less a 5% tolerance).
+
+**What maintenance do solar panels need?**
+Very little. Irish rain naturally cleans panels in most cases. An annual visual inspection is recommended, along with inverter firmware updates (done remotely) and monitoring alerts. Local Power offers maintenance packages.
+
+**Do I need planning permission?**
+For homes and agricultural buildings, solar is generally exempt. For commercial installations it depends on system size and location. Solar carports usually do require permission. Local Power verifies requirements for every installation and manages any application needed.
+
+**What size system do I need?**
+It depends on electricity consumption, roof space and budget. Local Power designs systems to maximise self-consumption and financial return rather than to fill available roof space.
+
+---
+
+## Solar PV — homes
+
+**How much will I save?**
+Homes typically save 30–50% of their annual electricity bill. Savings depend on system size, consumption patterns and how much generation is used on site rather than exported. Homes with daytime usage save more; adding battery storage increases savings for evening loads.
+
+**What is the payback period?**
+Most home solar systems pay for themselves in 6–10 years. SEAI grants reduce upfront cost significantly, and electricity price rises shorten payback. Generation continues for 30+ years after payback.
+
+**What grant is available?**
+Up to €1,800 in total from SEAI, calculated on a tiered per-kWp basis to an overall cap. SEAI rates change — confirm the current rate at seai.ie. You must be a homeowner with a BER certificate, in a property built and occupied before 2021, using a grant-registered contractor. Local Power is registered and manages the entire application.
+
+**How long does installation take?**
+Most home installations complete in 1–2 days, depending on system size and complexity.
+
+**How much roof space do I need?**
+A minimum of 15–20 m² of suitable roof. South, southeast or southwest orientation is preferred, though east and west-facing roofs can work well. Ground-mount is an option where the roof is unsuitable.
+
+**What if nobody is home during the day?**
+Many modern homes use electricity during the day regardless — refrigeration, heating controls, standby appliances. Appliances such as washing machines and dishwashers can be timed to run during generation. Battery storage is ideal for homes with mainly evening consumption.
+
+**Will solar increase my property value?**
+Studies show homes with solar command higher sale prices and sell faster. Solar is increasingly viewed as a valuable home improvement.
+
+**How much CO₂ will I save?**
+Typically 1–2 tonnes annually, equivalent to planting 50–100 trees per year.
+
+---
+
+## Battery storage
+
+**Do I need a battery?**
+For most Irish homes, yes — and the reason is the gap between what you are paid for exported electricity and what you pay to buy it back. Solar generates most strongly in the middle of the day, when many houses are empty. Without storage that generation is exported at a low rate, and the same units are bought back at full price in the evening when the house is busiest. A battery closes that gap: it holds the day's generation until you actually need it. It also gives you resilience during an outage, and it is what allows a system to take advantage of time-of-use and dynamic tariffs by charging at cheap overnight rates and discharging at peak. As Irish electricity pricing moves further towards time-of-use, storage is what lets a system respond to price rather than just to sunshine. Local Power sizes the battery to your actual consumption pattern rather than to the roof.
+
+**How long do batteries last?**
+Home batteries typically last 10–15 years. Commercial systems are designed for around 10 years depending on chemistry and usage. Capacity degrades naturally at roughly 1–2% per year, and warranties guarantee a minimum capacity over the warranty term.
+
+**What is the BMW connection to the SOLARWATT battery?**
+SOLARWATT Battery vision was designed in collaboration with Designworks, a BMW Group company, and its cells are qualified by BMW through approximately 30 separate tests. It is a substantive engineering relationship rather than a badging exercise, covering design, component selection and cell qualification. It matters because home batteries vary widely in cell quality and warranty terms, and a buyer has no practical way to assess what is inside. The BMW relationship is one of the few quality signals in this category that a non-technical buyer can actually evaluate.
+
+**What battery warranty applies?**
+SOLARWATT Battery vision carries a 12-year performance and product warranty on battery modules and a 12-year product warranty on power electronics, with a 70% residual state-of-health guarantee. Other home batteries carry 10–15 year warranties.
+
+**Can a battery power my home during an outage?**
+Yes, but it requires additional design — transfer switches and a critical load panel — which adds cost. Local Power assesses backup requirements and designs to meet them.
+
+**What is the commercial battery payback?**
+Typically 3–10 years depending on tariff structure, load profile and control strategy. Sites with high demand charges see the fastest returns.
+
+**Can a battery be added to existing solar?**
+In most cases yes. Local Power assesses the existing system and designs compatible integration.
+
+---
+
+## Solar for business
+
+**What is the commercial payback period?**
+Most commercial projects achieve ROI in 3–5 years, depending on consumption patterns, system size and available grants.
+
+**What grants are available for business?**
+Commercial solar grants range from €2,700 to €162,600, typically covering 20–30% of project cost. Schemes include the SEAI NDMG and Accelerated Capital Allowance tax relief. Local Power handles the full application, documentation and payment processing.
+
+**Will installation disrupt operations?**
+Installations are planned to minimise disruption. Local Power coordinates with the operations team to work around production.
+
+**Does solar support CSRD reporting?**
+Yes. Solar PV is a concrete decarbonisation action and can form part of reporting under the Corporate Sustainability Reporting Directive.
+
+---
+
+## Solar for farms
+
+**Is solar worth it for an Irish farm?**
+For most farms with daytime electricity loads, yes. Milking, milk cooling, ventilation, cold storage, grain drying and water pumping all align with solar generation. Typical paybacks are 2–4.5 years.
+
+**What grant can a farm get?**
+There are two routes. The SEAI route pays 20–25% and is readily accessible — as of September 2026 this is the practical option for most farms. TAMS 3 pays up to 60% for solar PV up to 62 kWp and battery storage up to 31 kWh with a €90,000 investment ceiling, but it has become very difficult to secure. Local Power is registered with both the SEAI and the Department of Agriculture and advises on which route is genuinely achievable rather than defaulting to the higher headline rate. Accelerated capital allowances apply on either route.
+
+**Should I wait for a TAMS grant?**
+Local Power's current advice is generally no. TAMS has become very hard to secure, and an approval you never receive is worth less than an SEAI grant you can have now — particularly once accelerated capital allowances are factored in. Local Power assesses both routes for every farm enquiry and will say which is realistic for your circumstances.
+
+**What are the tax benefits?**
+Qualifying equipment can attract accelerated capital allowances, allowing the cost to be written off in year one. The cash value depends on your tax position — confirm with your accountant.
+
+**Can my farm shed roof take solar?**
+Often yes, but it depends on structural condition. Local Power carries out a full structural assessment covering roof age, load-bearing capability, truss and purlin structure, and access safety. If a roof is unsuitable, ground-mount options are explored.
+
+**Does solar work on farms in winter?**
+Yes, though generation is lower — Irish farms generate approximately 25–30% less in winter months, while still achieving strong annual performance.
+
+---
+
+## EV charging
+
+**Why does Local Power use ChargePoint exclusively?**
+For reliability, support and user experience. ChargePoint operates the world's largest and most open EV charging network with 270,000+ charging spots globally, 98%+ network uptime, and a 24/7 driver support hotline.
+
+**Do drivers need an app?**
+No. Charging is started by tapping a credit or debit card, phone or smartwatch on the card reader — including on AC stations, not just DC. The ChargePoint app is no longer in use.
+
+**How long does a workplace charging project take?**
+Most complete in 2–4 weeks.
+
+**Do I control pricing and revenue?**
+Yes. The site owner sets tariffs and receives any revenue, with access control for employees, tenants or guests, and usage reporting and cost allocation.
+
+**Can EV charging be powered by solar?**
+Yes. Local Power designs combined solar, battery and charging infrastructure. Dynamic load management combined with storage can avoid costly grid upgrades.
+
+---
+
+## Biomethane
+
+**What is biomethane?**
+Renewable natural gas produced from organic material — slurry, manures, food waste, grass silage, energy crops — through anaerobic digestion. It is chemically identical to natural gas but produced from renewable sources in Ireland.
+
+**How is it produced?**
+Microorganisms break down organic material in sealed oxygen-free tanks, producing biogas at 60–70% methane. This is cleaned and upgraded to over 95% methane, then injected into the gas grid or used locally.
+
+**What can a farmer earn?**
+Feedstock suppliers can earn €15–35 per tonne for slurry, manures and energy crops under 10–20 year contracts, with digestate returned as fertiliser and no capital investment required. Land lease or hosting arrangements pay €5,000–15,000 per hectare per year under 20–30 year agreements, with the landowner retaining ownership.
+
+**Why does biomethane matter for Ireland?**
+It is dispatchable — available 24/7 and not weather-dependent — it uses existing gas grid infrastructure, it reduces agricultural methane emissions from slurry storage, and it replaces imported fossil gas with domestic renewable gas.
+
+---
+
+## Technology and data security
+
+**Where is the equipment made?**
+The control layer is European throughout: Fronius inverters are manufactured in Austria, and the SOLARWATT Manager is manufactured and its software engineered in Germany. Fronius Solar.web, the monitoring platform, is Austrian-operated. SOLARWATT modules are engineered and developed at the company's Dresden headquarters, with current Panel vision modules produced by long-standing contract manufacturers in Asia. Mounting systems are from Swiss manufacturer Ernst Schweizer.
+
+**Why does it matter where an inverter is made?**
+Because an inverter is not passive equipment. It is an internet-connected control device with authority over how electricity flows in your building, it generates detailed consumption data, and it receives remote firmware updates from the manufacturer for the 10-30 year life of the system. Whoever controls that firmware channel controls the device. For a homeowner that is a privacy consideration; for a business, public body or infrastructure operator it is a supply chain and operational security consideration, and it increasingly appears in procurement questionnaires.
+
+**How is my energy data protected?**
+The SOLARWATT Manager's hardware is manufactured and its software engineered in Germany, which SOLARWATT states is designed to meet European data governance standards. Fronius monitoring runs on Austrian-operated infrastructure. For organisations that must document where operational data is processed, a fully European control stack is a materially simpler position to evidence under GDPR.
+
+## Warranties and standards
+
+**What warranties apply?**
+SOLARWATT panels: 30-year product and 30-year performance warranty, 90% output guaranteed at year 30 (against nominal output under Standard Test Conditions, less a 5% tolerance). Fronius inverters: 10-year parts and labour through Local Power's FSP+ status, extendable. Batteries: 10–15 years depending on product. Plus Local Power's own workmanship guarantee on every installation.
+
+**What standards does installation meet?**
+Safe Electric registration with all electrical work by registered electricians and full certification. ESB Networks grid compliance with EN 50549 compliant inverters. Irish and European standards, building regulations compliance, fire safety certification where required, and insurance-compliant installation.
+
+**Is a maintenance contract required?**
+No, but it protects the investment, ensures warranty compliance and meets insurance requirements. Local Power also offers ad-hoc maintenance and services systems it did not install.
+
+---
+
+## Getting started
+
+**How do I get a quote?**
+Request one at `https://localpower.ie/get-a-quote/`, email `info@localpower.ie`, or call `+353 1 825 0263`. Quotes are free and carry no obligation.
+
+**What happens during the consultation?**
+Local Power assesses roof size, orientation and shading; analyses electricity bills and daytime versus evening consumption; and considers future needs such as EV charging, a heat pump, or extensions. The result is a system sized for your actual usage, with realistic projections based on your consumption rather than optimistic assumptions.
+
+**What if solar isn't right for my property?**
+Local Power states that it will say so: *"If solar isn't the right fit for your home, we'll tell you. We're here to provide expert guidance, not to sell systems that won't deliver value."*
+
+---
+
+*Last verified: 23 September 2026 · Source: localpower.ie*

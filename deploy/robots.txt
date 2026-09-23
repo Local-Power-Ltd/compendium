@@ -1,0 +1,80 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://localpower.ie/sitemap_index.xml
+
+# ---------------------------------------------------------------
+# AI and LLM crawlers — explicitly welcome.
+# Structured summary: https://localpower.ie/llms.txt
+# Full compendium:    https://localpower.ie/llms-full.txt
+# Usage policy:       https://localpower.ie/ai.txt
+# ---------------------------------------------------------------
+
+User-agent: GPTBot
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: CCBot
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /wp-admin/
+
+User-agent: MistralAI-User
+Allow: /
+Disallow: /wp-admin/

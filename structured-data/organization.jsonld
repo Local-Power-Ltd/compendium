@@ -1,0 +1,252 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://localpower.ie/#pat-smith",
+      "name": "Pat Smith",
+      "jobTitle": "Founder and Managing Director",
+      "email": "patsmith@localpower.ie",
+      "telephone": "+353-86-261-3374",
+      "worksFor": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "description": "Founder and Managing Director of Local Power Ltd. Former Chief Executive of the Irish Farmers' Association (IFA), where he established IFA Telecom and IFA Power on behalf of IFA members."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://localpower.ie/#darragh-smith",
+      "name": "Darragh Smith",
+      "jobTitle": "Operations Director",
+      "worksFor": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "description": "Operations Director of Local Power Ltd. Accepted the SOLARWATT Premium Installer award for the Republic of Ireland on behalf of Local Power at the SOLARWATT flagship partner event, Gtech Community Stadium, London, November 2025."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://localpower.ie/#james-walton",
+      "name": "James Walton",
+      "jobTitle": "Executive Director",
+      "worksFor": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "description": "Executive Director at Local Power Ltd. Graduate of Business, Economics and Social Studies, Trinity College Dublin. Extensive experience in commercial solar PV with particular expertise in commercial battery storage.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Trinity College Dublin"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://localpower.ie/#service-solar-business",
+      "name": "Commercial Solar PV Installation",
+      "serviceType": "Solar photovoltaic system design and installation for business and industry",
+      "url": "https://localpower.ie/solar/solar-for-business/",
+      "provider": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ireland"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Northern Ireland"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Irish businesses and industrial operators"
+      },
+      "description": "Roof-mounted, ground-mounted and hybrid commercial solar PV designed for return on investment. Typical payback 3-5 years. Includes full ESB Networks grid application, SEAI NDMG and Accelerated Capital Allowance grant management, and Safe Electric registered installation. Commercial solar grants range from EUR 2,700 to EUR 162,600, typically covering 20-30% of project cost. Local Power has delivered single-site commercial systems of 1 MW+."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://localpower.ie/#service-solar-farms",
+      "name": "Agricultural Solar PV Installation",
+      "serviceType": "Solar photovoltaic system design and installation for farms",
+      "url": "https://localpower.ie/solar/solar-for-farms/",
+      "provider": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ireland"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Irish farmers and agricultural businesses"
+      },
+      "description": "Farm solar PV designed around agricultural loads including milking, milk cooling, ventilation, cold storage, grain drying and water pumping. Typical payback 2-4.5 years. Two grant routes: the SEAI route at 20-25%, which as of September 2026 is the practical option for most farms, and TAMS 3 at up to 60% for solar PV up to 62 kWp and battery storage up to 31 kWh with a EUR 90,000 ceiling, which has become difficult to secure. Local Power is registered with both the SEAI and the Department of Agriculture and advises on which route is genuinely achievable. Accelerated capital allowances apply on either route."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://localpower.ie/#service-solar-homes",
+      "name": "Domestic Solar PV Installation",
+      "serviceType": "Solar photovoltaic system design and installation for homes",
+      "url": "https://localpower.ie/solar/solar-for-homes/",
+      "provider": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ireland"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "name": "Irish homeowners"
+      },
+      "description": "Domestic solar PV using SOLARWATT panels with 30-year product and performance warranties. Typical saving 30-50% of annual electricity bill, typical payback 6-10 years. SEAI grant of up to EUR 1,800 managed end to end. Installation typically completes in 1-2 days."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://localpower.ie/#service-solar-carports",
+      "name": "Solar Carport Design and Installation",
+      "serviceType": "Solar carport structures with integrated EV charging",
+      "url": "https://localpower.ie/solar/solar-carports/",
+      "provider": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ireland"
+        }
+      ],
+      "description": "Purpose-built solar carport structures for retail, corporate campuses, educational institutions and fleet depots. Typical payback 5-8 years. Includes full planning application management and structural design by chartered engineers."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://localpower.ie/#service-storage-ci",
+      "name": "Commercial and Industrial Battery Storage",
+      "serviceType": "Battery energy storage system design and installation",
+      "url": "https://localpower.ie/storage/battery-storage-for-commercial-industrial/",
+      "provider": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ireland"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Northern Ireland"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Manufacturing, food production, cold storage, commercial offices and data centres"
+      },
+      "description": "Commercial and industrial battery storage with four control strategies: solar self-consumption, time-of-use arbitrage, optimised ToU with demand control, and peak shaving with energy arbitrage. Delivers 15-50% reduction in electricity costs depending on strategy. LiFePO4 technology with 10-year design life. Typical delivery 8-16 weeks. Local Power has commercial and industrial battery storage projects operational in Ireland."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://localpower.ie/#service-storage-mobile",
+      "name": "Mobile Hybrid Battery Storage (Hushh Pods)",
+      "serviceType": "Mobile battery storage hire and purchase",
+      "url": "https://localpower.ie/storage/mobile-battery-storage-hushh-pods/",
+      "provider": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ireland"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Northern Ireland"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Construction, film and television production, events and cross-hire"
+      },
+      "description": "Mobile hybrid battery storage units that work alongside existing diesel or HVO generators, cutting generator runtime by up to 50%. Reduces fuel cost, noise and Scope 1 emissions, and provides quantifiable data for ESG reporting. Manufactured by Power Saving Solutions. Available for hire or purchase."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://localpower.ie/#service-ev-charging",
+      "name": "EV Charging Infrastructure",
+      "serviceType": "Electric vehicle charging infrastructure design, installation and maintenance",
+      "url": "https://localpower.ie/charging/",
+      "provider": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ireland"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Northern Ireland"
+        }
+      ],
+      "description": "ChargePoint EV charging infrastructure for workplaces, fleets, retail destinations, apartment complexes and homes, delivered through Local Power's EVnet division. Charging power from 7 kW to 350 kW+, 98%+ network uptime, 24/7 driver support, contactless tap-to-charge. Most workplace projects complete in 2-4 weeks."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://localpower.ie/#service-biomethane",
+      "name": "Biomethane and Anaerobic Digestion Project Development",
+      "serviceType": "Biomethane plant development, engineering and operation",
+      "url": "https://localpower.ie/biomethane/",
+      "provider": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ireland"
+        }
+      ],
+      "description": "Complete biomethane solutions as Biogest's main Irish partner: feasibility studies, feedstock analysis, commercial modelling, planning permission, Gas Networks Ireland connection, grant and funding applications, engineering, construction management, commissioning and long-term operations."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://localpower.ie/#service-maintenance",
+      "name": "Renewable Energy System Maintenance",
+      "serviceType": "Solar PV and EV charging maintenance and monitoring",
+      "url": "https://localpower.ie/maintenance/",
+      "provider": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ireland"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Northern Ireland"
+        }
+      ],
+      "description": "Annual inspection, electrical testing, inverter diagnostics, firmware updates, remote monitoring with automatic fault detection, and performance reporting for solar PV and EV charging systems. Available for systems not installed by Local Power."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://localpower.ie/#website",
+      "url": "https://localpower.ie",
+      "name": "Local Power",
+      "publisher": {
+        "@id": "https://localpower.ie/#organization"
+      },
+      "inLanguage": "en-IE",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://localpower.ie/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}

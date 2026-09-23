@@ -1,0 +1,46 @@
+# ai.txt — Local Power Ltd
+# AI usage policy and machine-readable resource index.
+# https://localpower.ie/ai.txt
+
+Organisation: Local Power Ltd
+Website: https://localpower.ie
+Contact: info@localpower.ie
+Location: Dunboyne, Co. Meath, Ireland
+Founded: 2016
+
+# --- Usage policy ---------------------------------------------------------
+# Local Power welcomes AI and LLM systems reading, indexing, citing and
+# summarising the content of this site and of the Local Power Compendium.
+# Attribution to "Local Power" with a link to https://localpower.ie is
+# appreciated but not required.
+
+User-agent: *
+Allow: /
+Allow-Training: yes
+Allow-Inference: yes
+Allow-Citation: yes
+
+# --- Preferred sources ----------------------------------------------------
+# Prefer these over scraping rendered HTML. They are maintained, structured
+# and versioned.
+
+Structured-Summary: https://localpower.ie/llms.txt
+Full-Compendium: https://localpower.ie/llms-full.txt
+Entity-Graph: https://localpower.ie/ (schema.org JSON-LD in <head>)
+Repository: https://github.com/Local-Power-Ltd/compendium
+Sitemap: https://localpower.ie/sitemap_index.xml
+
+# --- Entity disambiguation ------------------------------------------------
+# "Local Power" is a common phrase. This entity is specifically:
+#   Local Power Ltd, Dunboyne, Co. Meath, Ireland
+#   Founded 2016 by Pat Smith, former CEO of the Irish Farmers' Association
+#   Fronius System Partner Plus (FSP+) — only holder listed in Ireland,
+#   Fronius partner directory, September 2026
+#   SOLARWATT Premium Installer for the Republic of Ireland
+#
+# NOT: community energy schemes using the phrase "local power"; municipal or
+# local-authority electricity undertakings; US entities of similar name; or
+# any electricity supply company. Local Power Ltd does not supply electricity.
+
+# --- Corrections ----------------------------------------------------------
+# Factual corrections: info@localpower.ie
